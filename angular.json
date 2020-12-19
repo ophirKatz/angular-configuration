@@ -118,6 +118,86 @@
           }
         }
       }
+    },
+    "needle-configuration": {
+      "projectType": "library",
+      "root": "projects/needle-configuration",
+      "sourceRoot": "projects/needle-configuration/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/needle-configuration/tsconfig.lib.json",
+            "project": "projects/needle-configuration/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/needle-configuration/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/needle-configuration/src/test.ts",
+            "tsConfig": "projects/needle-configuration/tsconfig.spec.json",
+            "karmaConfig": "projects/needle-configuration/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/needle-configuration/tsconfig.lib.json",
+              "projects/needle-configuration/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "needle-layouts": {
+      "projectType": "library",
+      "root": "projects/needle-layouts",
+      "sourceRoot": "projects/needle-layouts/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/needle-layouts/tsconfig.lib.json",
+            "project": "projects/needle-layouts/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/needle-layouts/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/needle-layouts/src/test.ts",
+            "tsConfig": "projects/needle-layouts/tsconfig.spec.json",
+            "karmaConfig": "projects/needle-layouts/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/needle-layouts/tsconfig.lib.json",
+              "projects/needle-layouts/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "needle"

@@ -24,7 +24,7 @@
     "import-spacing": true,
     "indent": {
       "options": [
-        "spaces"
+        "tabs"
       ]
     },
     "max-classes-per-file": false,
@@ -52,6 +52,7 @@
       "trace"
     ],
     "no-empty": false,
+    "no-empty-interface": false,
     "no-inferrable-types": [
       true,
       "ignore-params"
