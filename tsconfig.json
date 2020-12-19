@@ -23,6 +23,10 @@
       "needle-layouts": [
         "dist/needle-layouts/needle-layouts",
         "dist/needle-layouts"
+      ],
+      "needle-localization": [
+        "dist/needle-localization/needle-localization",
+        "dist/needle-localization"
       ]
     }
   }

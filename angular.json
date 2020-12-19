@@ -198,6 +198,46 @@
           }
         }
       }
+    },
+    "needle-localization": {
+      "projectType": "library",
+      "root": "projects/needle-localization",
+      "sourceRoot": "projects/needle-localization/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/needle-localization/tsconfig.lib.json",
+            "project": "projects/needle-localization/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/needle-localization/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/needle-localization/src/test.ts",
+            "tsConfig": "projects/needle-localization/tsconfig.spec.json",
+            "karmaConfig": "projects/needle-localization/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/needle-localization/tsconfig.lib.json",
+              "projects/needle-localization/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "needle"

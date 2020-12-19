@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { AppConfigurationModule } from './configuration/app-configuration.module';
+import { AppLocalizationModule } from './app-localization.module';
 
 @NgModule({
   declarations: [
@@ -11,6 +12,7 @@ import { AppConfigurationModule } from './configuration/app-configuration.module
   imports: [
     BrowserModule,
     AppConfigurationModule,
+    AppLocalizationModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

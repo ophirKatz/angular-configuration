@@ -1,5 +1,6 @@
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { ModuleWithProviders, NgModule, Type } from '@angular/core';
+
 import { APP_CONFIG, IAppConfig } from './app-config';
 
 import { createAppInitializers } from './app-initializers';
@@ -8,10 +9,7 @@ import { JsonFileService } from './json-file.service';
 import { Configurations } from './types';
 
 @NgModule({
-	declarations: [],
-	imports: [HttpClientModule],
-	providers: [],
-	exports: []
+	imports: [HttpClientModule]
 })
 export class NeedleConfigurationModule {
 
